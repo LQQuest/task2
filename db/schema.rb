@@ -1,11 +1,11 @@
-ActiveRecord::Schema.define(version: 2021_07_21_110018) do
+ActiveRecord::Schema.define(version: 2021_08_03_134950) do
 
   enable_extension "plpgsql"
 
-  create_table "comment", force: :cascade do |t|
-    t.bigint "order_id"
+  create_table "comments", force: :cascade do |t|
+    t.integer "order_id"
     t.string "description"
-    t.index ["order_id"], name: "index_comment_on_order_id"
+    t.index ["order_id"], name: "index_comments_on_order_id", using: :hash
   end
 
   create_table "orders", force: :cascade do |t|

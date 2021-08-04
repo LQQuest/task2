@@ -4,7 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.3'
 
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'bootstrap', '~> 4.4.1'
 gem 'jbuilder', '~> 2.7'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
@@ -15,8 +14,6 @@ gem 'webpacker', '~> 5.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'database_cleaner'
-  gem 'faker'
   gem 'pry-rails'
   gem 'rails-controller-testing'
   gem 'rspec-benchmark'
@@ -33,7 +30,6 @@ end
 
 group :test do
   gem 'capybara', '>= 3.26'
-  gem 'factory_bot_rails'
   gem 'rubocop', require: false
   gem 'shoulda-matchers'
 end
